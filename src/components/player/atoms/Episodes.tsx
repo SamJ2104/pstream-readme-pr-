@@ -190,7 +190,7 @@ function EpisodesView({
 
           <div
             ref={carouselRef}
-            className="md:flex md:overflow-x-auto flex-col md:flex-row space-y-2 sm:space-y-4 md:space-y-0 md:space-x-4 pb-4 pt-2 sm:pt-2 md:px-20 scrollbar-hide no-scrollbar md:h-auto"
+            className="lg:flex lg:overflow-x-auto flex-col lg:flex-row space-y-2 sm:space-y-4 lg:space-y-0 lg:space-x-4 pb-4 pt-2 sm:pt-0 lg:px-20 scrollbar-hide no-scrollbar lg:h-auto"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
@@ -254,15 +254,15 @@ function EpisodesView({
                     <div
                       onClick={() => playEpisode(ep.id)}
                       className={classNames(
-                        "flex-shrink-0 md:w-64 w-full rounded-lg overflow-hidden transition-all duration-200 relative md:pb-1 cursor-pointer",
-                        "hidden sm:flex md:inline-block" /* Hidden on xs, flex on sm, inline-block on md+ */,
+                        "flex-shrink-0 lg:w-64 w-full rounded-lg overflow-hidden transition-all duration-200 relative lg:pb-1 cursor-pointer",
+                        "hidden sm:flex lg:inline-block" /* Hidden on xs, flex on sm, inline-block on md+ */,
                         isActive
                           ? "bg-video-context-hoverColor/50"
                           : "hover:bg-video-context-hoverColor/50",
                         !isAired ? "opacity-50" : "hover:scale-95",
                       )}
                     >
-                      <div className="relative aspect-video bg-video-context-hoverColor md:w-full w-1/3 flex-shrink-0">
+                      <div className="relative aspect-video bg-video-context-hoverColor lg:w-full w-1/3 flex-shrink-0">
                         {/* Episode Thumbnail */}
                         {ep.still_path ? (
                           <img
@@ -297,7 +297,7 @@ function EpisodesView({
                           {ep.title}
                         </h3>
                         {ep.overview && (
-                          <p className="text-sm text-white mt-1.5 line-clamp-2 md:line-clamp-2">
+                          <p className="text-sm text-white mt-1.5 line-clamp-2 lg:line-clamp-2">
                             {ep.overview}
                           </p>
                         )}
